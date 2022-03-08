@@ -1,1 +1,1 @@
-# [https://bulatsashvililasha.github.io/vueWishList/)(Wish list)
+# [Wish list](https://bulatsashvililasha.github.io/vueWishList/)
