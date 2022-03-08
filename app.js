@@ -4,7 +4,7 @@ Vue.createApp({
             plText: "add wish",
             title: "Gvantsa's wishes",
             inputValue: '',
-            notes: ['Diving with Lasha','Go on a safari in africa','Swim with dolphins'],
+            notes: ['Scuba diving','Go on a safari in africa','Swim with dolphins'],
         }
     },
     methods: {
