@@ -32,7 +32,7 @@ Vue.createApp({
     },
     watch:{
       inputValue(value){
-          if(value.length>20){
+          if(value.length>120){
               this.inputValue = ''
           }
 
