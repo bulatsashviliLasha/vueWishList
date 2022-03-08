@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+
+<div id="app" class="container ">
+  <div class="card">
+    <h1 :style="{color: inputValue.length>10 ? 'green': 'red'}">{{title}}</h1>
+    <div class="form-control">
+      <input
+              type="text"
+              v-model="inputValue"
+              @keypress.enter="addNewNote"
+              :placeholder="plText"
+      >
+
+    </div>
+
+    <br>
+    <buttton class="btn"  @click="addNewNote">Add</buttton>
+
+    <hr/>
+    <ul class="list" v-if="notes.length !== 0">
+      <li class="list-item" v-for="(note,i) in notes">
+             <span :class="['primary',{'bold': note.length>5}]">{{toUpperCase(note)}}</span>
+        <button class="btn danger" @click="removeNote(i)">Delete</button>
+      </li>
+      <hr>
+      <li>
+       <strong>Overall wishes: {{notes.length}}</strong> | Doubled: {{ doubleCount }}
+      </li>
+    </ul>
+
+    <div v-else>No wishes</div>
+  </div>
+</div>
+
+
+
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="app.js"></script>
+  </body>
+</html>
